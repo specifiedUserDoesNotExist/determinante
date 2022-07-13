@@ -84,6 +84,3 @@ matrix = {
 }
 
 print(determinant(matrix))
-
-
-

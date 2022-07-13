@@ -51,19 +51,17 @@ def determinant(A):
 	return det
 
 
-matrix = [
-	[1,2,4.5,-1],
-	[4,5,-3,11],
-	[-15,7,8,9],
-	[5,12,45,67]
-]
+def main()
+	matrix = [
+		[1,2,4.5,-1],
+		[4,5,-3,11],
+		[-15,7,8,9],
+		[5,12,45,67]
+	]
 
-m=[
-	[1,2],
-	[2,3]
-]
-
-print(determinant(matrix))
+	print(determinant(matrix))
+	
+	return
 
 
 

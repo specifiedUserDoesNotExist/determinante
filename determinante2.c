@@ -37,9 +37,7 @@ float determinante(float matrix[], int n){
 	for (int j=0;j<factorial(n);j++){
 		prod=1.0;
 		sign = numberInversion(permutation, n, j*n);
-		for (int i=0;i<n;i++){
-			prod *= matrix[i*n+permutation[n*j+i]];
-		}
+		for (int i=0;i<n;i++) prod *= matrix[i*n+permutation[n*j+i]];
 		det += sign*prod;
 	}
 	
@@ -48,7 +46,7 @@ float determinante(float matrix[], int n){
 
 int factorial(int n){
 	int f = 1;
-	for (int i=n;i>1;i--)f*=i;
+	for (int i=n;i>1;i--) f*=i;
 	return f;
 }
 
@@ -101,20 +99,13 @@ int numberInversion(int lista[], int n, int init){
 	
 	for (int i = init; i < init+n; i++){
 		for (int j = i; j < init+n; j++){
-			if (lista[i] > lista[j]){
-				s+=1;
-			}
+			if (lista[i] > lista[j]) s+=1;
 		}
 	}
 	return v[s%2];
 }
 
-void 
-readFile(
-	char file[],
-	float matrix[], 
-	int sizeMatrix)
-{
+void readFile(char file[], float matrix[], int sizeMatrix){
 	
 	int sizeLine = 30;
 	
